@@ -1166,7 +1166,6 @@ textarea#comment::placeholder {
     background-color: #fff;
     color: #111;
     margin: 1rem 0;
-    border-radius: 0.5rem;
     border-bottom: 1px solid #CECECE;
   }
   
@@ -1446,5 +1445,22 @@ textarea#comment::placeholder {
   .h { grid-area: h; }
   .i { grid-area: i; }
   .j { grid-area: j; } */
+
+  @media (min-width: 1600px) {
+    .container-fluid{
+        max-width: 1400px;
+        width: 100%;
+      }
+      .product-name {
+        font-size: 4rem;
+    }
+    .about_section_2 .yoga_taital {
+        font-size: 3rem;
+    }
+    .navbar{
+        max-width: 1400px;
+        margin: auto;
+    }
+  }
   
-  
+ 

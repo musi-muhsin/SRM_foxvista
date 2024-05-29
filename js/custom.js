@@ -73,53 +73,6 @@
 //   document.querySelectorAll('.hover-section button').forEach(button => {
 // 	new HoverButton(button);
 //   });
-  
-
-// carousel testimonial
-const btns = document.querySelectorAll(".btn");
-const slideRow = document.getElementById("slide-row");
-const main = document.querySelector(".slider");
-const prevArrow = document.querySelector(".arrow.prev");
-const nextArrow = document.querySelector(".arrow.next");
-
-let currentIndex = 0;
-
-function updateSlide() {
-  const mainWidth = main.offsetWidth;
-  const translateValue = currentIndex * -mainWidth;
-  slideRow.style.transform = `translateX(${translateValue}px)`;
-
-  btns.forEach((btn, index) => {
-    btn.classList.toggle("active", index === currentIndex);
-  });
-}
-
-btns.forEach((btn, index) => {
-  btn.addEventListener("click", () => {
-    currentIndex = index;
-    updateSlide();
-  });
-});
-
-prevArrow.addEventListener("click", () => {
-  if (currentIndex > 0) {
-    currentIndex--;
-    updateSlide();
-  }
-});
-
-nextArrow.addEventListener("click", () => {
-  if (currentIndex < btns.length - 1) {
-    currentIndex++;
-    updateSlide();
-  }
-});
-
-window.addEventListener("resize", () => {
-  updateSlide();
-});
-
-
 // mobile accordion
 const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
 
@@ -143,6 +96,26 @@ accordionItemHeaders.forEach(accordionItemHeader => {
     
    });
 });
+
+  // header
+
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    // header.classList.add("sticky");
+    header.classList.add("bg-white");
+    header.classList.remove("bg-transparent");
+  } else {
+    // header.classList.remove("sticky");
+    header.classList.remove("bg-white");
+    header.classList.add("bg-transparent");
+  }
+}
+
 
 
 $(function () {
@@ -462,24 +435,7 @@ $(function () {
 
 });
 
-// header
 
-window.onscroll = function() {myFunction()};
-
-var header = document.getElementById("myHeader");
-var sticky = header.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    // header.classList.add("sticky");
-    header.classList.add("bg-white");
-    header.classList.remove("bg-transparent");
-  } else {
-    // header.classList.remove("sticky");
-    header.classList.remove("bg-white");
-    header.classList.add("bg-transparent");
-  }
-}
 
 
 
