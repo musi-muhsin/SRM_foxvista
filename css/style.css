@@ -265,7 +265,7 @@ button {
 }
 
 .navbar {
-    padding: 10px 40px 10px 40px;
+    padding: 10px 20px;
 }
 
 .login_bt {
@@ -297,8 +297,13 @@ button {
 
 
 /* header section end */
+.lmtWIHO_gkbTeeyuvoJC{
+    justify-content: center;
+}
 
-
+.calendly-inline-widget {
+    overflow: hidden !important;
+}
 /* banner section start */
 
 .hero-img{
@@ -1399,18 +1404,18 @@ textarea#comment::placeholder {
     display: inline-block;
     list-style-type: none;
     margin: 0 20px;
-  }
+  } */
   
   button {
-    position: relative;
+    /* position: relative;
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    cursor: pointer;
+    cursor: pointer; */
     background: transparent;
   }
   
-  li:nth-child(3), li:nth-child(4), li:nth-child(6) {
+  /* li:nth-child(3), li:nth-child(4), li:nth-child(6) {
     width: fit-content;
   }
   
@@ -1420,20 +1425,35 @@ textarea#comment::placeholder {
     width: 135px;
     height: 135px;
   }
-  
+   */
   .hover-section {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-template-areas: 
       "a b c e g h j"
       "a b d f g i j";
+      height: 240px;
+      max-width: 1400px;
+      margin-inline: auto;
+
   }
   
   .hover-section li {
     margin: 0;
+    width: fit-content;
   }
+  .hover-section li img{
+    filter: grayscale(1);
+  }
+  .hover-section li img:hover{
+    filter: none;
+    scale: 1.05;
+    z-index: 1;
+    display: flex;
+  }
+
   
   .a { grid-area: a; }
   .b { grid-area: b; }
@@ -1444,7 +1464,7 @@ textarea#comment::placeholder {
   .g { grid-area: g; }
   .h { grid-area: h; }
   .i { grid-area: i; }
-  .j { grid-area: j; } */
+  .j { grid-area: j; }
 
   @media (min-width: 1600px) {
     .container-fluid{
@@ -1455,12 +1475,20 @@ textarea#comment::placeholder {
         font-size: 4rem;
     }
     .about_section_2 .yoga_taital {
-        font-size: 3rem;
+        font-size: 3rem ;
+    }
+    .customer_taital {
+        font-size: 3rem ;
     }
     .navbar{
         max-width: 1400px;
         margin: auto;
     }
+    .font-size{
+        font-size: 3rem ;
+    }
   }
   
- 
+ .font-size{
+    font-size: calc(0.6vw + 1.8vh + 2vmin) ;
+ }
