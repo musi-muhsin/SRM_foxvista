@@ -1,9 +1,15 @@
 /*--------------------------------------------------------------------- File Name: responsive.css ---------------------------------------------------------------------*/
 
+@media only screen and (max-width: 991px) {
+    .navbar {
+        background: #fff;
+    }
+}
 @media only screen and (max-width: 768px) {
     .text-md-center{
          text-align: center;
     }
+    
     .indicator .btn {
         width: 20px !important;
     }

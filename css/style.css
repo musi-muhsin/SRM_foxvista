@@ -912,6 +912,7 @@ textarea#comment.massage-bt::placeholder {
     float: left;
     color: #ffffff;
     font-size: 16px;
+    word-wrap: break-word;
 }
 
 .location_text a:hover {
